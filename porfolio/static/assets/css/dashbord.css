@@ -1,0 +1,25 @@
+body{
+    background-color: rgb(230, 227, 227);
+}
+
+.my-card:hover{
+    transform: scale(1.1);
+    transition: 0.2s ease-in-out;
+}
+
+.navbar {
+    background-color: orangered !important;
+    
+}
+
+.navbar-nav li a{
+    color: #fff !important;
+    font-weight: 600;
+}
+.fa-bars{
+    color: #fff;
+    font-size: 30px !important;
+}
+.navbar-toggler{
+    outline: none !important;
+}

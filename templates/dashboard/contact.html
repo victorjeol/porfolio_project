@@ -1,0 +1,44 @@
+{% extends "dashboard/header.html" %}
+{% load crispy_forms_tags %}
+{% block content %}
+
+{% comment %} {% include "dashboard/head.html" %} {% endcomment %}
+
+
+{% comment %} <div class="container"> {% endcomment %}
+
+<div class="col-md-8 offset-md-2"> 
+    <div class="row my-4">
+        <div class="col-md-12 col-sm-12 col-xm-12">
+            <table class="table bg-white">
+                <thead class=""  style="background-color: orangered;">
+                    <tr>
+                        <th scope="col">Name</th>
+                        <th scope="col">Email</th>
+                        <th scope="col">Phone</th>
+                        <th scope="col">Message</th>
+                        <th scope="col">Delete</th>
+                    </tr>
+            
+                </thead>
+                <tbody>
+                  {% for contact in contacts %}
+                    <tr>
+                        <th scope="row">{{ contact.name }}</th>
+                        <td>{{ contact.email }}</td>
+                        <td>{{ contact.phone }}</td>
+                        <td>{{ contact.message }}</td>
+                        <td>
+                           
+                            <a class="btn btn-danger btn-sm" href="{% url 'contact_delete' contact.pk %}">Delete</a>
+                        </td>
+                    </tr>
+                  {% endfor %}
+                </tbody>
+            </table>
+            
+        </div>
+
+    </div>
+
+{% endblock %}

@@ -1,0 +1,16 @@
+.navbar {
+    background-color: orangered !important;
+    
+}
+
+.navbar-nav li a{
+    color: #fff !important;
+    font-weight: 600;
+}
+.fa-bars{
+    color: #fff;
+    font-size: 30px !important;
+}
+.navbar-toggler{
+    outline: none !important;
+}

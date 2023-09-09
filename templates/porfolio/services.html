@@ -1,0 +1,139 @@
+{% extends "porfolio/header.html" %}
+  {% block content %}
+        <!-- toggle switch for light and dark theme -->
+        <div class="mobile-position">
+          <nav class="navigation">
+            <div class="theme-switch-wrapper">
+              <label class="theme-switch" for="checkbox">
+                <input type="checkbox" id="checkbox">
+                <div class="mode-container py-1">
+                  <i class="gg-sun"></i>
+                  <i class="gg-moon"></i>
+                </div>
+              </label>
+            </div>
+          </nav>
+        </div>
+        <!-- //toggle switch for light and dark theme -->
+      </nav>
+    </div>
+  </header>
+  <!--/header-->
+
+  <div class="inner-banner">
+  </div>
+  <section class="w3l-breadcrumb">
+    <div class="container">
+      <ul class="breadcrumbs-custom-path">
+        <li><a href="{% url 'index' %}">Home</a></li>
+        <li class="active"><span class="fa fa-arrow-right mx-2" aria-hidden="true"></span> Services</li>
+      </ul>
+    </div>
+  </section>
+  <!--/services-->
+  <section class="w3l-services2" id="services">
+    <div id="cwp23-block" class="py-5">
+      <div class="container py-lg-5">
+
+        <div class="row cwp23-content mt-lg-5 mt-4">
+          <div class="col-lg-6 cwp23-img">
+            <h3 class="hny-title">Our Promise to deliver:</h3>
+            
+          
+            
+          </div>
+          <div class="col-lg-6 cwp23-text align-self mt-lg-0 mt-5 pl-lg-5">
+            <div class="cwp23-text-cols">
+              <div class="column">
+                <span class="fa fa-clock-o" aria-hidden="true"></span>
+                <a href=""> Professional Expertise</a>
+                <p>Feel confident that you are hiring the best in the business. </p>
+
+               
+
+              </div>
+              <div class="column">
+                <span class="fa fa-cogs" aria-hidden="true"></span>
+            
+                <a href=""> Superior Quality</a>
+                <p>We prepare the area properly and use the right equipment for the job in order to ensure the job is done correctly.</p>
+              </div>
+
+              <div class="column">
+                <span class="fa fa-mars" aria-hidden="true"></span>
+                <a href="">
+                 Clean Work Areas</a>
+                <p>We always make sure to clean up our work area. </p>
+              </div>
+            
+
+              <div class="column">
+                <span class="fa fa-user" aria-hidden="true"></span>
+                <a href=""> On Budget</a>
+                <p>When we provide pricing for the job, we will stick to it. No surprise fees after the work is complete.</p>
+              </div>
+             
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="container">
+  <h3 class="hny-title" style="text-align: center; padding: 40px;">what we do</h3>
+  <p style="text-align: center; padding: 10px; padding-bottom: 10px;"><strong>Click on the services card to see the latest projects.</strong> </p>
+    <div class="row" cwp23-content>
+      <div class="col-lg-4"aria-hidden="true" style="margin-bottom: 70px;">
+        <div class="card my-card" style="padding: 40px;">
+         <h3 style="color: black;">Interior & Exterior Decoration</h3>
+       
+              </div>
+        </div>
+        <div class="col-lg-4" aria-hidden="true" style="margin-bottom: 70px;">
+          <div class="card my-card" aria-hidden="true" style="padding: 40px; background-color: orangered;">
+           <h3 style="color: black;" >Selling of Building Materials</h3>
+          <p> </p>
+                </div>
+          </div>
+          <div class="col-lg-4" aria-hidden="true"style="margin-bottom: 70px;">
+            <a href="{% url 'wallpaper' %}"><div class="card my-card" style="padding: 40px; background-color: orangered;">
+             <h3 style="color: black;"> 3G wallpaper</h3>
+            <p>wallpaper of your chiors</p>
+                  </div></a>
+            </div>
+            <div class="col-lg-4" style="margin-bottom: 70px;">
+              <a href="{% url 'po' %}"><div class="card my-card" style="padding: 40px; background-color: orangered;">
+               <h3 style="color: black;"> Pop Ceiling Installation</h3>
+              <p></p>
+                    </div></a>
+              </div>
+              <div class="col-lg-4" style="margin-bottom: 70px;">
+                <a href="{% url 'painting' %}"><div class="card my-card" style="padding: 40px; background-color: orangered;">
+                 <h3 style="color: black;">painting services</h3>
+                <p>We always make sure to clean up our work area. </p>
+                      </div></a>
+                </div>
+
+                <div class="col-lg-4 b" style="margin-bottom: 70px;">
+                  <a href="{% url 'reflector' %}"><div class="card my-card" style="padding: 40px; background-color: orangered;">
+                   <h3 style="color: black;">Reflector floor</h3>
+                  <p>We make floors of ur chiors.</p>
+                        </div></a>
+                  </div>
+ 
+
+    </div>
+
+  </div>
+
+  
+
+  <!--//services-->
+  <!--/w3l-services3-->
+  
+     
+{% include "porfolio/footer.html" %}
+{% endblock  %}
+

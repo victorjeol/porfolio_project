@@ -1,0 +1,153 @@
+{% extends "dashboard/header.html" %}
+{% block content %}
+{% if user.is_authenticated and user.is_superuser %}
+<div class="container">
+    <div class="row mt-4">
+        <div class="col-md-4">
+            <div class="card">
+                <div class="card-header text-white"  style="background-color: orangered;">
+                    information
+                </div>
+                <div class="card-body">
+                    <marquee behavior="" direction="">
+                        <h3 class="my-4">This is the information</h3>
+
+                    </marquee>
+
+                </div>
+            </div>
+        </div>
+        <div class="col-md-8">
+            <div class="card">
+                <div class="card-header text-white"  style="background-color: orangered;">
+                   statistics
+                </div>
+                <div class="card-body">
+                    <div class="row">
+                        <div class="col-md-6 p-3">
+                            <a class="text-decoration-none text-dark" href="">
+                                <div class="card shadow  text-center p-3 my-card">
+                                <h4>staff<i class="fas fas-user"></i></h4>
+                                <h4>4</h4>
+                                </div>
+
+                            </a>
+                        </div>
+                        <div class="col-md-6 p-3">
+                            <a class="text-decoration-none text-dark" href="{% url 'all_service' %}">
+                                <div class="card shadow  text-center p-3 my-card">
+                                <h4>product<i class="fas fas-box"></i></h4>
+                                <h4>4</h4>
+                                </div>
+
+                            </a>
+                        </div>
+                     
+
+
+                    </div>
+                 
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
+<!-- End Topside -->
+<!-- Graphs -->
+<div class="container">
+    <div class="row my-5">
+        <div class="col-md-6">
+            <div class="bg-white">   
+            <canvas id="myChart1" width="400" height="300"></canvas>
+<script>
+const ctx = document.getElementById('myChart1').getContext('2d');
+const myChart1 = new Chart(ctx, {
+    type: 'pie',
+    data: {
+        labels: ['Red', 'Blue', 'Yellow', 'Green', 'Purple', 'Orange'],
+        datasets: [{
+            label: 'Products',
+            data: [12, 19, 3, 5, 2, 3],
+            backgroundColor: [
+                'rgba(255, 99, 132, 1)',
+                'rgba(54, 162, 235, 1)',
+                'rgba(255, 206, 86, 1)',
+                'rgba(75, 192, 192, 1)',
+                'rgba(153, 102, 255, 1)',
+                'rgba(255, 159, 64, 1)'
+            ],
+            borderColor: [
+                'rgba(255, 99, 132, 1)',
+                'rgba(54, 162, 235, 1)',
+                'rgba(255, 206, 86, 1)',
+                'rgba(75, 192, 192, 1)',
+                'rgba(153, 102, 255, 1)',
+                'rgba(255, 159, 64, 1)'
+            ],
+            borderWidth: 1
+        }]
+    },
+    options: {
+        scales: {
+            y: {
+                beginAtZero: true
+            }
+        }
+    }
+});
+</script>           
+</div>
+</div>
+<div class="col-md-6">
+    <div class="bg-white">
+    <canvas id="myChart" width="400" height="300"></canvas>
+<script>
+const ctx = document.getElementById('myChart').getContext('2d');
+const myChart = new Chart(ctx, {
+    type: 'bar',
+    data: {
+        labels: ['Red', 'Blue', 'Yellow', 'Green', 'Purple', 'Orange'],
+        datasets: [{
+            label: '# of Votes',
+            data: [12, 19, 3, 5, 2, 3],
+            backgroundColor: [
+                'rgba(255, 99, 132, 0.2)',
+                'rgba(54, 162, 235, 0.2)',
+                'rgba(255, 206, 86, 0.2)',
+                'rgba(75, 192, 192, 0.2)',
+                'rgba(153, 102, 255, 0.2)',
+                'rgba(255, 159, 64, 0.2)'
+            ],
+            borderColor: [
+                'rgba(255, 99, 132, 1)',
+                'rgba(54, 162, 235, 1)',
+                'rgba(255, 206, 86, 1)',
+                'rgba(75, 192, 192, 1)',
+                'rgba(153, 102, 255, 1)',
+                'rgba(255, 159, 64, 1)'
+            ],
+            borderWidth: 1
+        }]
+    },
+    options: {
+        scales: {
+            y: {
+                beginAtZero: true
+            }
+        }
+    }
+});
+</script>
+</div>
+</div>
+
+</div>
+</div>
+ {% else %}
+   <div class="container">
+     <h3>sorry this Page is only for staff<h3>
+   </div>
+ {% endif %}
+{% endblock  %}

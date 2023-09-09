@@ -1,0 +1,26 @@
+{% extends "dashboard/base.html" %}
+{% load crispy_forms_tags %}
+
+{% block content %}
+<div class="container">
+  <div class="row mt-5">
+  <div class="col-md-6 offset-md-3">
+  <div class="border  p-3" style="color: black;">
+  <h3>Admin login page</h3>
+  <hr>
+  <form action="login"  method="post">
+  <div style="width: 100%;">{% include "user/message.html" %}</div>
+  {% csrf_token %}
+  <input type="text" name="username" placeholder="Username" style="padding: 10px; width: 100%; margin: 6px; background-color: gainsboro; color: black; text-align: center; border-radius: 15px; "><br>
+  <input type="password" name="password" placeholder="password" style="padding: 10px; width: 100%; margin: 6px; background-color: gainsboro; color: black; text-align: center; border-radius: 15px; "><br>
+
+  <input class="btn" type="submit" value="login" style="color: white; padding: 10px;  border-radius: 15px; background-color: orangered;">
+  </form>
+
+  </div>
+  </div>
+ 
+  </div>
+  </div>
+
+{% endblock  %}

@@ -1,0 +1,89 @@
+   {% extends "porfolio/header.html" %}
+     {% block content %}
+        <!-- toggle switch for light and dark theme -->
+       
+        <div class="mobile-position">
+          <nav class="navigation">
+            <div class="theme-switch-wrapper">
+              <label class="theme-switch" for="checkbox">
+                <input type="checkbox" id="checkbox">
+                <div class="mode-container py-1">
+                  <i class="gg-sun"></i>
+                  <i class="gg-moon"></i>
+                </div>
+              </label>
+            </div>
+          </nav>
+        </div>
+        <!-- //toggle switch for light and dark theme -->
+      </nav>
+    </div>
+  </header>
+  <!--/header-->
+ 
+<div class="inner-banner">
+</div>
+<section class="w3l-breadcrumb">
+    <div class="container">
+        <ul class="breadcrumbs-custom-path">
+            <li><a href="#url">Home</a></li>
+            <li class="active"><span class="fa fa-arrow-right mx-2" aria-hidden="true"></span> Contact Us</li>
+        </ul>
+    </div>
+</section>
+  <!--/contact-->
+  <section class="w3l-contact-11 py-5">
+    <div class="contacts-main py-lg-5 py-md-4">
+      <div class="title-content text-center">
+        <h6 class="sub-titlehny">Contact</h6>
+        <h3 class="hny-title">Get in touch with us</h3>
+    </div>
+ 
+
+      <div class="form-41-mian section-gap mt-5">
+        <div class="container">
+         {% include "porfolio/message.html" %}
+          <div class="d-grid align-form-map">
+            <div class="form-inner-cont">
+              <form action="" method="POST" class="signin-form">
+              {% csrf_token %}
+                <div class="form-input">
+                  <label for="w3lName">Name</label>
+                  <input type="text" name="name" id="w3lName" placeholder="" />
+                </div>
+                <div class="form-input">
+                  <label for="id_email">Email(Required)*</label>
+                  <input type="email" name="email" id="id_email" placeholder="" />
+                </div>
+                 <div class="form-input">
+                  <label for="w3lName">Phone Name</label>
+                  <input type="text" name="phone" id="id_phone" placeholder="" />
+                </div>
+                <div class="form-input">
+                  <label for="id_message">Message(Required)*</label>
+                  <textarea placeholder="" name="message" id="id_message" ></textarea>
+                </div>
+                <div class="form-submit text-right">
+                    <button type="submit" class="btn btn-style btn-primary">Submit Message</button>
+                  </div>
+              </form>
+            </div>
+              <div class="map">
+                <div class="contact-info mt-4">
+                 <p class="mb-3"><label>Address: </label> Port harcourt, LY-90814 Hill Station 2nd Street</p>
+                <p class="mb-3"><label>Email : </label> <a href="mailto:aleelovictor5@gmail.com" class="email">aleelovictor5@gmail.com</a></p>
+                <p class="mb-3"><label>Phone : </label> <a href="tel:+1-2345-678-11">+1-2345-678-11</a></p>
+                 <p class="mb-3"><label>Hours : </label> Mon-Fri: 8am – 7pm</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      
+      </div>
+   
+      </div>
+  </section>
+{% include "porfolio/footer.html" %}
+{% endblock  %}
+
+  
